@@ -99,7 +99,7 @@ define(['../../lib/chai/chai.js', '../../lib/underscore/underscore.js'], functio
         it('has a .prototype.constructor property that points back to the constructor itself', function(){
           expect(constructor.prototype.constructor).to.equal(constructor);
         });
-
+        
         var extendsConstructor = requireOption('extendsConstructor');
         it(might('extend the constructor function', extendsConstructor), function(){
           constructorPropertyCount = Object.keys(constructor).length;
@@ -114,7 +114,7 @@ define(['../../lib/chai/chai.js', '../../lib/underscore/underscore.js'], functio
 
         var referencesThis = requireOption('referencesThis');
         it(might('reference the keyword this', referencesThis), function(){
-          assuming(referencesThis).expect(/^((?!\/\/).)*(this)/.test(constructor)).to.be.true;
+          assuming(referencesThis).expect(/((?!\/\/).)*(this)/.test(constructor)).to.be.true;
         });
 
         var referencesReturn = requireOption('referencesReturn');

@@ -24,7 +24,6 @@ var Queue = function(){
 
   someInstance.size = function(){
     return end - start;
-  
   };
 
   return someInstance;
