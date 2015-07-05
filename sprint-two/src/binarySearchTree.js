@@ -84,4 +84,7 @@ var binarySearchTreeMethods = {
 
 /*
  * Complexity: What is the time complexity of the above functions?
+    O(log(n))
+      -for each element that you add, you have to search through a fraction of 1 element 
+        -for example: add 10 elements, only search through 4 to return match
  */

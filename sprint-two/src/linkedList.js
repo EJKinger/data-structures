@@ -3,7 +3,7 @@ var LinkedList = function(){
   list.head = null;
   list.tail = null;
 
-  list.addToTail = function(value){ //o(1)
+  list.addToTail = function(value){
     if (list.head === null){
       list.head = Node(value);
       list.tail = list.head;
@@ -21,7 +21,7 @@ var LinkedList = function(){
     return val;
   };
 
-  list.contains = function(target, node){   //o(n)
+  list.contains = function(target, node){
     if(node === undefined){
       node = list.head;
     }
@@ -49,4 +49,8 @@ var Node = function(value){
 
 /*
  * Complexity: What is the time complexity of the above functions?
+addToTail O(1)
+removeHead O(1)
+contains O(n)
+
  */

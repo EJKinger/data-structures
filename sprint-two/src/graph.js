@@ -56,6 +56,11 @@ Graph.prototype.forEachNode = function(cb){
 
 /*
  * Complexity: What is the time complexity of the above functions?
+    //addNode is O(1), constant because we are adding one value at a time;
+    //removeNode is O(n)
+    //hasEdge is O(n)
+    //addEdge is O(1)
+    //removeEdge is O(n)
  */
 
 
