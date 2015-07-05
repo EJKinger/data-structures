@@ -3,24 +3,25 @@ var LinkedList = function(){
   list.head = null;
   list.tail = null;
 
-  list.addToTail = function(value){
+  list.addToTail = function(value){ //o(1)
     if (list.head === null){
       list.head = Node(value);
+      list.tail = list.head;
+    } 
+    else {
+      var newTail = Node(value);
+      list.tail.next = newTail;
+      list.tail = newTail;
     }
-    list.tail = Node(value);
-    list.head.next = list.tail;
-
   };
 
   list.removeHead = function(){
-    var val = list.head;
-    if(list.head.next !== null){ 
-      list.head = list.head.next;
-    }
-    return val.value;
+    var val = list.head.value;
+    list.head = list.head.next;
+    return val;
   };
 
-  list.contains = function(target, node){
+  list.contains = function(target, node){   //o(n)
     if(node === undefined){
       node = list.head;
     }
@@ -32,10 +33,8 @@ var LinkedList = function(){
     if(node.next !== null){
       return list.contains(target, node.next);
     }
-
     return false;
   };
-
   return list;
 };
 
